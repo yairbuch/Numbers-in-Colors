@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./app.js" type="module"></script>
+  <title>Guess The Number</title>
+</head>
+
+<body id="body" style="background-color: whitesmoke">
+  <h1 id="mainHead" style="font-size: 37px; cursor: pointer">
+    Numbers <span style="font-size: 20px"> in</span>
+    <span style="font-family: cursive; font-size: 40px">
+      <span style="color: red"> C</span><span style="color: blue">o</span><span style="color: orange">l</span><span
+        style="color: rgb(24, 209, 24)">o</span><span style="color: purple">r</span><span
+        style="color: skyblue">s</span></span>
+  </h1>
+  <h2 id="initialResult" style="font-size: 37px"></h2>
+  <h2 id="tami" style="font-size: 37px"></h2>
+  <br /><br />
+  <table id="mytable" class="table1" style="margin: auto">
+    <tr>
+      <td>
+        <div class="a1" id="a1">1</div>
+      </td>
+      <td>
+        <div class="b2" id="b2">2</div>
+      </td>
+      <td>
+        <div class="c3" id="c3">3</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="d4" id="d4">4</div>
+      </td>
+      <td>
+        <div class="e5" id="e5">5</div>
+      </td>
+      <td>
+        <div class="f6" id="f6">6</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="g7" id="g7">7</div>
+      </td>
+      <td>
+        <div class="h8" id="h8">8</div>
+      </td>
+      <td>
+        <div class="i9" id="i9">9</div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <h1 id="h1"></h1>
+
+  <button id="numbers" style="color:purple;">הכנס מספר</button>
+  <button class="flag" id="flags" style="color:blue; background-color: rgb(250, 226, 226);">הכנס
+    מדינה</button>
+  <button id="names" style="color:firebrick; background-color:rgb(250, 226, 226)">
+    הכנס שם
+  </button>
+  <br />
+  <br />
+  <input type="text" id="box" size="8" /> &nbsp;
+  <select name="countries" id="boxsh" style="width: 100px; direction: rtl;">
+    <option value="ארצות הברית">ארצות הברית</option>
+    <option value="ישראל">ישראל</option>
+    <option value="איטליה">איטליה</option>
+    <option value="גרמניה">גרמניה</option>
+    <option value="צרפת">צרפת</option>
+    <option value="אירלנד">אירלנד</option>
+    <option value="יפן">יפן</option>
+    <option value="קנדה">קנדה</option>
+    <option value="ארגנטינה">ארגנטינה</option>
+
+  </select> &nbsp;
+  <input type="text" id="boxna" size="8" /> <br /> <br>
+  <p id="order"></p>
+  <p id="order2"></p>
+  <button id="shapesButton" style="background-color: rgb(250, 226, 226); font-size: 27px;">
+    🖌️</button> &nbsp;
+  &nbsp;
+  <button id="musicButton" style="background-color: rgb(250, 226, 226); font-size: 27px;">&#x1F3B5</button> &nbsp;
+  &nbsp;
+  <button class="plus" id="mathButton" style="background-color: rgb(250, 226, 226); font-size: 27px;">🧮</button> <br>
+  <br> <br>
+  <button id="h2">?איך משחקים</button> <br>
+  <button class="traingu" id="traingu">.</button> &nbsp; &nbsp;
+  <button id="squ" class="squ">/</button> &nbsp; &nbsp;
+  <button class="circ" id="circ">.</button> &nbsp; &nbsp;
+  <button id="upp" class="up">.</button> &nbsp; &nbsp;
+  <button id="lineses" class="lines">.</button> &nbsp; &nbsp;
+
+  <h5 id="h51" style="display: none;">.הכנס מספר בין 1-999 ולחץ על הכפתור "הכנס מסספר". המספר ייעלם והילד יבחר בהתאם
+    מתוך לוח המקשים</פ>
+    <h5 id="h52" style="display: none;">הכנס את הספרה 0 על מנת להקיש על כל ספרה מספר הקשות בהתאם לערכה ובסופם יתקבל
+      פידבק. לדוג': הכנס 0 ולאחר מכן תוכל להקיש על הספרה 3, שלוש פעמים ויתקבל פידבק של הצלחה</h5>
+    <h5 id="h53" style="display: none;">הכנס 0.1 או 0.2 וכו' על מנת להעלים מהלוח את הספרה שמימין לנקודה ובחר את האפשרות
+      הנכונה שתצוץ
+    </h5>
+    <h5 id="h54" style="display: none;"> הקש על הכותרת על מנת לצבוע את מקשי הלוח בלבן ולאחר מכן הכנס מספר ובחרו במקום
+      הנכון בלוח </h5>
+    <h5 id="h55" style="display: none;">בחר מדינה ולאחר מכן הקש על כפתור המברשת ובחר את הצורה הנכונה על מנת לצבוע את
+      הלוח בהתאם לצבעי הדגל שנבחר. צבע הצורה ישתנה בהקשה עליה בלוח</h5>
+    <h5 id="h56" style="display: none;">.לחץ על כפתור התווים על מנת להפיק צלילים בהקשה על המספרים</h5>
+    <h5 id="h57" style="display: none;"> באפשרותך להכניס בתיבת 'הכנס שם' את המילה איי,בי,סי באנגלית באותיות קטנות, ואז
+      להקיש על כפתור הצליל ומקשי הלוח יהבהבו לפי צלילי השיר. הילד יוכל לעקוב אחריהם ולנגן את השיר</h5>
+    <h5 id="h58" style="display: none;"> לחץ על כפתור החרוזים על מנת להוסיף אפשרויות של חיבור וחיסור בהמחשה ויזואלית של
+      אימוג'ים. לא לשכוח ללחוץ על כפתור '=' לפני הקשת התשובה הנכונה</h5>
+
+
+    <p id="clue1"></p>
+
+
+
+</body>
+
+</html>

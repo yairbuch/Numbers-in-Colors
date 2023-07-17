@@ -1,0 +1,204 @@
+  body {
+      text-align: center;
+
+  }
+
+  div {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      text-align: center;
+      font-size: 45px;
+      line-height: 100px;
+
+
+
+  }
+
+  .a1 {
+
+
+      background-color: rgb(50, 188, 243);
+  }
+
+  .a1:active {
+      transform: translateY(4px);
+  }
+
+  .b2 {
+      background-color: rgb(198, 40, 198);
+  }
+
+  .b2:active {
+      transform: translateY(4px);
+  }
+
+  .c3 {
+      background-color: palegreen;
+
+  }
+
+  .c3:active {
+      transform: translateY(4px);
+  }
+
+  .d4 {
+      background-color: pink;
+
+  }
+
+  .d4:active {
+      transform: translateY(4px);
+  }
+
+  .e5 {
+      background-color: orange;
+  }
+
+  .e5:active {
+      transform: translateY(4px);
+  }
+
+  .f6 {
+      background-color: green;
+  }
+
+  .f6:active {
+      transform: translateY(4px);
+  }
+
+  .g7 {
+      background-color: gold;
+  }
+
+  .g7:active {
+      transform: translateY(4px);
+  }
+
+  .h8 {
+      background-color: firebrick;
+  }
+
+  .h8:active {
+      transform: translateY(4px);
+  }
+
+  .i9 {
+      background-color: aqua;
+
+  }
+
+  .i9:active {
+      transform: translateY(4px);
+  }
+
+  button {
+      padding: 10px 15px;
+      font-size: 19px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: black;
+      background-color: rgb(250, 226, 226);
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 7px #999;
+  }
+
+  button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+  }
+
+  .squ {
+      background-color: rgb(250, 226, 226);
+      border-radius: 0px;
+      box-shadow: 0 4px #04aa6d;
+      padding: 0%;
+      height: 45px;
+      width: 45px;
+      color: rgb(250, 226, 226);
+      display: none;
+
+
+  }
+
+  .squ:active {
+      background-color: blue;
+      color: blue;
+
+  }
+
+  .traingu {
+      border-radius: 0px;
+      box-shadow: 0 3px #04aa6d;
+      padding: 0%;
+      height: 0px;
+      width: 0px;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 34px solid rgb(250, 226, 226);
+      background-color: initial;
+      color: rgb(250, 226, 226);
+      display: none;
+
+
+
+  }
+
+  .traingu:active {
+      background-color: initial;
+      color: yellow;
+
+  }
+
+  .circ {
+      background-color: rgb(250, 226, 226);
+      border-radius: 50%;
+      box-shadow: 0 4px blue;
+      padding: 0%;
+      height: 45px;
+      width: 45px;
+      color: rgb(250, 226, 226);
+      display: none;
+
+  }
+
+  .circ:active {
+      background-color: brown;
+      color: brown;
+  }
+
+  .lines {
+      background: linear-gradient(rgb(250, 226, 226) 25%, white 25% 50%, rgb(250, 226, 226) 50% 75%, white 75% 100%);
+      border-radius: 0px;
+      box-shadow: 0 4px firebrick;
+      padding: 0%;
+      height: 45px;
+      width: 45px;
+      color: rgb(250, 226, 226);
+      display: none;
+
+  }
+
+  .lines:active {
+      background: linear-gradient(red 25%, white 25% 50%, red 50% 75%, white 75% 100%);
+      color: red;
+  }
+
+  .up {
+      background: conic-gradient(white 50%, rgb(250, 226, 226)50%);
+      border-radius: 0px;
+      box-shadow: 0 4px firebrick;
+      padding: 0%;
+      height: 45px;
+      width: 45px;
+      color: rgb(250, 226, 226);
+      display: none;
+  }
+
+  .up:active {
+      background: conic-gradient(white 50%, red 50%);
+
+  }
