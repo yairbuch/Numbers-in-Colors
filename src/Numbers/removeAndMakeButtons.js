@@ -1,8 +1,34 @@
 export const numbButton = document.getElementById("numbers");
 
 export const putNumber = () => {
-  localStorage.numb = box.value;
-  box.value = "";
+  if (box.value === "!") {
+    let randomNumb;
+
+    do {
+      randomNumb = Math.floor(Math.random() * 999) + 1;
+    } while (randomNumb.toString().includes("0"));
+
+    localStorage.numb = randomNumb;
+    box.value = randomNumb;
+    setTimeout(() => {
+      box.value = "";
+    }, 2500);
+  } else if (box.value === ".") {
+    const longDecimal = Math.random() * 0.8 + 0.1;
+    const randomNumb = longDecimal.toFixed(1);
+    localStorage.numb = randomNumb;
+    box.value = randomNumb;
+    setTimeout(() => {
+      box.value = "";
+    }, 1500);
+  } else if (box.value === "") {
+    const randomNumb = Math.floor(Math.random() * 9) + 1;
+    localStorage.numb = randomNumb;
+    box.value = randomNumb;
+    setTimeout(() => {
+      box.value = "";
+    }, 2500);
+  }
 
   const GiveClue = (dollars, color) => {
     box.value = "";
