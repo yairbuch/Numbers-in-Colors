@@ -28,10 +28,12 @@ export const putNumber = () => {
     setTimeout(() => {
       box.value = "";
     }, 2500);
+  } else if (box.value === "push") {
+    localStorage.numb = "push";
+    box.value = "";
   }
 
   const GiveClue = (dollars, color) => {
-    box.value = "";
     clue1.innerHTML = dollars;
     clue1.style.color = color;
     clue1.style.fontSize = "350%";
@@ -126,7 +128,6 @@ export const putNumber = () => {
   const disappearNumb = (number) => {
     number.innerText = "";
     clue1.innerHTML = "";
-    box.value = "";
   };
 
   const TrueNumClick = (number, value) => {

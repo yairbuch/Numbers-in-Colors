@@ -1,11 +1,42 @@
+let count = 0;
+let colorIndex = 0;
+const colors = [
+  "rgb(50, 188, 243)",
+  "rgb(198, 40, 198)",
+  "palegreen",
+  "pink",
+  "orange",
+  "green",
+  "gold",
+  "firebrick",
+  "aqua",
+];
 export const writingNumbersByClick = (number, value, numOfClicks) => {
   const h1 = document.getElementById("h1");
   let body = document.getElementById("body");
-  if (localStorage.numb == 0) {
+  const popupContainer = document.getElementById("popup-container");
+  const popupNumber = document.getElementById("popup-number");
+  count += 1;
+  if (localStorage.numb == "push") {
     navigator.vibrate(40);
     number.style.color = "white";
     number.style.border = "groove";
 
+    popupNumber.textContent = count;
+    popupContainer.style.display = "block";
+    popupContainer.style.color = colors[colorIndex];
+
+    colorIndex = (colorIndex + 1) % colors.length;
+
+    setTimeout(() => {
+      popupContainer.style.opacity = "0";
+    }, 1000);
+
+    setTimeout(() => {
+      popupNumber.textContent = "";
+      popupContainer.style.display = "none";
+      popupContainer.style.opacity = "1";
+    }, 1000);
     h1.innerHTML += value;
 
     if (h1.innerHTML == numOfClicks) {

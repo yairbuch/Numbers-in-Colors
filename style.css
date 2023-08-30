@@ -202,3 +202,22 @@
       background: conic-gradient(white 50%, red 50%);
 
   }
+
+
+  #popup-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.3);
+      color: rgb(50, 188, 243);
+      transition: color 0.3s ease;
+      padding: 20px;
+      border-radius: 50%;
+      text-align: center;
+      display: none;
+  }
+
+  #popup-number {
+      font-size: 100px;
+  }
