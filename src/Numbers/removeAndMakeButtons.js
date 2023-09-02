@@ -31,6 +31,9 @@ export const putNumber = () => {
   } else if (box.value === "push") {
     localStorage.numb = "push";
     box.value = "";
+  } else {
+    localStorage.numb = box.value;
+    box.value = "";
   }
 
   const GiveClue = (dollars, color) => {

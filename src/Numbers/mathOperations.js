@@ -8,7 +8,6 @@ export const Math = () => {
   let equal = row.insertCell(2);
   const initialResult = document.getElementById("initialResult");
   const h1 = document.getElementById("h1");
-  const tami = document.getElementById("tami");
   plus.style.fontSize = "50px";
   minus.style.fontSize = "50px";
   equal.style.fontSize = "50px";

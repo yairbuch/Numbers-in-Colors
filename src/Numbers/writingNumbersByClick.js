@@ -11,9 +11,15 @@ const colors = [
   "firebrick",
   "aqua",
 ];
-export const writingNumbersByClick = (number, value, numOfClicks) => {
-  const h1 = document.getElementById("h1");
-  let body = document.getElementById("body");
+const h1 = document.getElementById("h1");
+let body = document.getElementById("body");
+
+export const writingNumbersByClick = (
+  number,
+  value,
+  numOfClicks,
+  backgroundColor
+) => {
   const popupContainer = document.getElementById("popup-container");
   const popupNumber = document.getElementById("popup-number");
   count += 1;
@@ -67,6 +73,8 @@ export const writingNumbersByClick = (number, value, numOfClicks) => {
   } else {
     number.style.color = "white";
     number.style.border = "groove";
+    number.style.backgroundColor = backgroundColor;
+    number.innerText = value;
     h1.innerHTML += value;
   }
   if (h1.innerHTML == localStorage.numb) {
@@ -81,82 +89,39 @@ export const writingNumbersByClick = (number, value, numOfClicks) => {
 };
 
 export const one = () => {
-  if (localStorage.numb == 1) {
-    a1.innerText = 1;
-    a1.style.backgroundColor = "rgb(50, 188, 243)";
-  }
-  writingNumbersByClick(a1, 1, 1);
+  writingNumbersByClick(a1, 1, 1, colors[0]);
 };
 
 export const two = () => {
-  if (localStorage.numb == 2) {
-    b2.innerText = 2;
-    b2.style.backgroundColor = " purple";
-  }
-
-  writingNumbersByClick(b2, 2, 22);
+  writingNumbersByClick(b2, 2, 22, colors[1]);
 };
 
 export const three = () => {
-  if (localStorage.numb == 3) {
-    c3.innerText = 3;
-    c3.style.backgroundColor = "palegreen";
-  }
-  writingNumbersByClick(c3, 3, 333);
+  writingNumbersByClick(c3, 3, 333, colors[2]);
 };
 
 export const four = () => {
-  if (localStorage.numb == 4) {
-    d4.innerText = 4;
-    d4.style.backgroundColor = "pink";
-  }
-
-  writingNumbersByClick(d4, 4, 4444);
+  writingNumbersByClick(d4, 4, 4444, colors[3]);
 };
 
 export const five = () => {
-  if (localStorage.numb == 5) {
-    e5.innerText = 5;
-    e5.style.backgroundColor = "orange";
-  }
-
-  writingNumbersByClick(e5, 5, 55555);
+  writingNumbersByClick(e5, 5, 55555, colors[4]);
 };
 
 export const six = () => {
-  if (localStorage.numb == 6) {
-    f6.innerText = 6;
-    f6.style.backgroundColor = "green";
-  }
-
-  writingNumbersByClick(f6, 6, 666666);
+  writingNumbersByClick(f6, 6, 666666, colors[5]);
 };
 
 export const seven = () => {
-  if (localStorage.numb == 7) {
-    g7.innerText = 7;
-    g7.style.backgroundColor = "gold";
-  }
-
-  writingNumbersByClick(g7, 7, 7777777);
+  writingNumbersByClick(g7, 7, 7777777, colors[6]);
 };
 
 export const eight = () => {
-  if (localStorage.numb == 8) {
-    h8.innerText = 8;
-    h8.style.backgroundColor = "firebrick";
-  }
-
-  writingNumbersByClick(h8, 8, 88888888);
+  writingNumbersByClick(h8, 8, 88888888, colors[7]);
 };
 
 export const nine = () => {
-  if (localStorage.numb == 9) {
-    i9.innerText = 9;
-    i9.style.backgroundColor = "aqua";
-  }
-
-  writingNumbersByClick(i9, 9, 999999999);
+  writingNumbersByClick(i9, 9, 999999999, colors[8]);
 };
 
 a1.onclick = () => one();
