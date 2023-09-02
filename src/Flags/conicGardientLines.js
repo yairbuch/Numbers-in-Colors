@@ -1,7 +1,7 @@
-export const conicButton = document.getElementById("upp");
+import { conicButton, countryName } from "../services/domService.js";
+
 export const conicGradientLines = () => {
   localStorage.numb = "t";
-  const countryName = document.getElementById("boxsh");
   order.innerHTML = "";
   order2.innerHTML = "";
 

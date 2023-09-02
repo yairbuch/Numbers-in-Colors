@@ -1,4 +1,5 @@
-export const Flags = document.getElementById("flags");
+import { Flags } from "../services/domService.js";
+
 export const flag = () => {
   localStorage.shape = boxsh.value;
   localStorage.numb = "t";

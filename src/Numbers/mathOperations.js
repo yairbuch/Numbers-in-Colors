@@ -1,13 +1,17 @@
-export const mathButton = document.getElementById("mathButton");
+import {
+  mathButton,
+  table,
+  h1,
+  initialResult,
+} from "../services/domService.js";
+
 export const Math = () => {
   localStorage.numb = "t";
-  let table = document.getElementById("mytable");
   let row = table.insertRow(3);
   let plus = row.insertCell(0);
   let minus = row.insertCell(1);
   let equal = row.insertCell(2);
-  const initialResult = document.getElementById("initialResult");
-  const h1 = document.getElementById("h1");
+
   plus.style.fontSize = "50px";
   minus.style.fontSize = "50px";
   equal.style.fontSize = "50px";

@@ -1,8 +1,7 @@
+import { squ, circ, traingu } from "../services/domService.js";
+
 export const traingular = () => {
   localStorage.numb = "t";
-  var circ = document.querySelector(".circ");
-  var squ = document.querySelector(".squ");
-  var traingu = document.querySelector(".traingu");
   circ.style.border = "initial";
   squ.style.border = "initial";
   traingu.style.boxShadow = "0 4px orange";

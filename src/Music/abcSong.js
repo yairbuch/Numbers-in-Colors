@@ -1,8 +1,8 @@
-export const musicButton = document.getElementById("musicButton");
+import { musicButton } from "../services/domService.js";
+
 export const music = async () => {
   if (boxna.value == "abc") {
     boxna.style.backgroundColor = "red";
-    let initTime = 0;
 
     const timeout = setTimeout(() => {
       a1.style.color = "white";

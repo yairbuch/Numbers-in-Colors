@@ -1,3 +1,5 @@
+import { table } from "../services/domService.js";
+
 export const WritesNameToTable = () => {
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -5,7 +7,7 @@ export const WritesNameToTable = () => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-  const table = document.getElementById("mytable");
+
   const inputString = localStorage.name || "";
 
   const positions = ["a1", "b2", "c3", "d4", "e5", "f6", "g7", "h8", "i9"];
@@ -17,7 +19,7 @@ export const WritesNameToTable = () => {
       assignedLetters[letter] = true;
       table.querySelector(`#${positions[index]}`).innerText = letter;
     } else {
-      table.querySelector(`#${positions[index]}`).innerText = "";
+      table.querySelector(`#${positions[index]}`).innerText = " ";
     }
   }
   shuffleArray(positions);
@@ -27,7 +29,7 @@ export const WritesNameToTable = () => {
   }
 
   for (let i = inputString.length; i < positions.length; i++) {
-    table.querySelector(`#${positions[i]}`).innerText = "";
+    table.querySelector(`#${positions[i]}`).innerText = " ";
   }
   mainHead.innerHTML = localStorage.name;
 

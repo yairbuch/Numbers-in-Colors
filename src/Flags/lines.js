@@ -1,10 +1,10 @@
-export const lineses = document.getElementById("lineses");
+import { lineses, countryName } from "../services/domService.js";
+
 export const lines = () => {
   localStorage.numb = "t";
   a1.style.marginRight = 0;
   order.innerHTML = "";
   order2.innerHTML = "";
-  const countryName = document.getElementById("boxsh");
 
   let a = 0;
 

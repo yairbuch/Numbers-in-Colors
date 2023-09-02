@@ -1,6 +1,6 @@
+import { boxna, namesButton } from "../services/domService.js";
 import { WritesNameToTable } from "./WriteNameToTable.js";
 
-export const namesButton = document.getElementById("names");
 export const speechFeedback = document.getElementById("speechFeedback");
 export const putName = () => {
   localStorage.numb = "t";

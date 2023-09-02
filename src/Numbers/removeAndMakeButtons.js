@@ -1,5 +1,6 @@
-export const numbButton = document.getElementById("numbers");
+import { box } from "../services/domService.js";
 
+export const numbButton = document.getElementById("numbers");
 export const putNumber = () => {
   if (box.value === "!") {
     let randomNumb;
@@ -28,8 +29,8 @@ export const putNumber = () => {
     setTimeout(() => {
       box.value = "";
     }, 2500);
-  } else if (box.value === "push") {
-    localStorage.numb = "push";
+  } else if (box.value === "count") {
+    localStorage.numb = "count";
     box.value = "";
   } else {
     localStorage.numb = box.value;

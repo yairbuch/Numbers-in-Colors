@@ -1,3 +1,10 @@
+import {
+  h1,
+  body,
+  popupContainer,
+  popupNumber,
+} from "../services/domService.js";
+
 let count = 0;
 let colorIndex = 0;
 const colors = [
@@ -11,8 +18,6 @@ const colors = [
   "firebrick",
   "aqua",
 ];
-const h1 = document.getElementById("h1");
-let body = document.getElementById("body");
 
 export const writingNumbersByClick = (
   number,
@@ -20,10 +25,8 @@ export const writingNumbersByClick = (
   numOfClicks,
   backgroundColor
 ) => {
-  const popupContainer = document.getElementById("popup-container");
-  const popupNumber = document.getElementById("popup-number");
   count += 1;
-  if (localStorage.numb == "push") {
+  if (localStorage.numb == "count") {
     navigator.vibrate(40);
     number.style.color = "white";
     number.style.border = "groove";

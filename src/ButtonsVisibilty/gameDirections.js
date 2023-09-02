@@ -1,5 +1,7 @@
+import { directionsButton } from "../services/domService.js";
+
 let dire = 0;
-export const directionsButton = document.getElementById("h2");
+
 export const directions = () => {
   dire++;
   if (dire % 2 != 0) {

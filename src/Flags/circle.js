@@ -1,9 +1,15 @@
+import {
+  circ,
+  countryName,
+  squ,
+  traingu,
+  order,
+  order2,
+  body,
+} from "../services/domService.js";
+
 export const circle = () => {
   localStorage.numb = "t";
-  var circ = document.querySelector(".circ");
-  var squ = document.querySelector(".squ");
-  var traingu = document.querySelector(".traingu");
-  const countryName = document.getElementById("boxsh");
   circ.style.border = "groove";
   squ.style.border = "initial";
   traingu.style.boxShadow = "initial";

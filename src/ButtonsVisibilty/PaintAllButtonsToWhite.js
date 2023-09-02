@@ -1,4 +1,5 @@
-export const headButton = document.getElementById("mainHead");
+import { headButton } from "../services/domService.js";
+
 let isClicked = false;
 const a = [a1.style.backgroundColor, a1.innerText, a1.style.border];
 const b = [b2.style.backgroundColor, b2.innerText, b2.style.border];
@@ -16,7 +17,6 @@ const paintToWhiteInnerFunc = (number, color, text, border) => {
   number.style.border = border;
 };
 export const PaintToWhite = () => {
-  const h1 = document.getElementById("h1");
   isClicked = !isClicked;
   if (isClicked) {
     paintToWhiteInnerFunc(a1, "initial", "", "groove");
