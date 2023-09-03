@@ -1,5 +1,5 @@
-import { musicButton } from "../services/domService.js";
-
+import { musicButton, boxna } from "../services/domService.js";
+export const audioC = document.getElementById("audioC");
 export const music = async () => {
   if (boxna.value == "abc") {
     boxna.style.backgroundColor = "red";
@@ -135,28 +135,36 @@ export const music = async () => {
   }
 
   a1.onclick = function () {
-    let dod = new Audio("./sounds/do.m4a");
-    dod.play();
+    const doNote = new Audio("../../sounds/do.wav");
+    doNote.play();
   };
   e5.onclick = function () {
-    let sol = new Audio("./sounds/Solsol.m4a");
-    sol.play();
+    const solNote = new Audio("../../sounds/sol.wav");
+    solNote.play();
   };
   f6.onclick = function () {
-    let lala = new Audio("./sounds/Lala.m4a");
-    lala.play();
+    const laNote = new Audio("../../sounds/la.wav");
+    laNote.play();
   };
   d4.onclick = function () {
-    let fafa = new Audio("./sounds/Fafa.m4a");
-    fafa.play();
+    const faNote = new Audio("../../sounds/fa.wav");
+    faNote.play();
   };
   c3.onclick = function () {
-    let mimi = new Audio("./sounds/Meme.m4a");
-    mimi.play();
+    const miNote = new Audio("../../sounds/mi.wav");
+    miNote.play();
   };
   b2.onclick = function () {
-    let rere = new Audio("./sounds/Rela.m4a");
-    rere.play();
+    const reNote = new Audio("../../sounds/re.wav");
+    reNote.play();
+  };
+  g7.onclick = function () {
+    const siNote = new Audio("../../sounds/si.m4a");
+    siNote.play();
+  };
+  h8.onclick = function () {
+    const octave = new Audio("../../sounds/octave.wav");
+    octave.play();
   };
 };
 
