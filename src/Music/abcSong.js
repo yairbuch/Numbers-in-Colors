@@ -1,9 +1,9 @@
 import { musicButton, boxna } from "../services/domService.js";
-export const audioC = document.getElementById("audioC");
+
 export const music = async () => {
   if (boxna.value == "abc") {
     boxna.style.backgroundColor = "red";
-
+    0;
     const timeout = setTimeout(() => {
       a1.style.color = "white";
       a1.innerText = "A";
@@ -135,35 +135,35 @@ export const music = async () => {
   }
 
   a1.onclick = function () {
-    const doNote = new Audio("../../sounds/do.wav");
+    const doNote = new Audio("./sounds/do.wav");
     doNote.play();
   };
   e5.onclick = function () {
-    const solNote = new Audio("../../sounds/sol.wav");
+    const solNote = new Audio("./sounds/sol.wav");
     solNote.play();
   };
   f6.onclick = function () {
-    const laNote = new Audio("../../sounds/la.wav");
+    const laNote = new Audio("./sounds/la.wav");
     laNote.play();
   };
   d4.onclick = function () {
-    const faNote = new Audio("../../sounds/fa.wav");
+    const faNote = new Audio("./sounds/fa.wav");
     faNote.play();
   };
   c3.onclick = function () {
-    const miNote = new Audio("../../sounds/mi.wav");
+    const miNote = new Audio("./sounds/mi.wav");
     miNote.play();
   };
   b2.onclick = function () {
-    const reNote = new Audio("../../sounds/re.wav");
+    const reNote = new Audio("./sounds/re.wav");
     reNote.play();
   };
   g7.onclick = function () {
-    const siNote = new Audio("../../sounds/si.m4a");
+    const siNote = new Audio("./sounds/si.m4a");
     siNote.play();
   };
   h8.onclick = function () {
-    const octave = new Audio("../../sounds/octave.wav");
+    const octave = new Audio("./sounds/octave.wav");
     octave.play();
   };
 };

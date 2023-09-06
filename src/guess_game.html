@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./app.js" type="module"></script>
+  <title>Guess The Number</title>
+</head>
+
+<body id="body" style="background-color: whitesmoke">
+  <h1 id="mainHead" style="font-size: 37px; cursor: pointer">
+    Numbers <span style="font-size: 20px"> in</span>
+    <span style="font-family: cursive; font-size: 40px">
+      <span style="color: red"> C</span><span style="color: blue">o</span><span style="color: orange">l</span><span
+        style="color: rgb(24, 209, 24)">o</span><span style="color: purple">r</span><span
+        style="color: skyblue">s</span></span>
+  </h1>
+  <h2 id="initialResult" style="font-size: 37px"></h2>
+  <h2 id="speechFeedback" style="font-size: 37px"></h2>
+  <table id="mytable" class="table1" style="margin: auto; border-collapse: collapse; border-spacing: 0;">
+    <tr>
+      <td>
+        <div class="a1" id="a1">1</div>
+      </td>
+      <td>
+        <div class="b2" id="b2">2</div>
+      </td>
+      <td>
+        <div class="c3" id="c3">3</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="d4" id="d4">4</div>
+      </td>
+      <td>
+        <div class="e5" id="e5">5</div>
+      </td>
+      <td>
+        <div class="f6" id="f6">6</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="g7" id="g7">7</div>
+      </td>
+      <td>
+        <div class="h8" id="h8">8</div>
+      </td>
+      <td>
+        <div class="i9" id="i9">9</div>
+      </td>
+    </tr>
+  </table>
+  <h1 id="h1"></h1>
+
+  <button id="numbers" style="color:purple;">הכנס מספר</button>
+  <button class="flag" id="flags" style="color:blue;">הכנס
+    מדינה</button>
+  <button id="names" style="color:firebrick;">
+    הכנס שם
+  </button>
+  <br />
+  <br />
+  <input type="text" id="box" size="8" /> &nbsp;
+  <select name="countries" id="boxsh" style="width: 100px; direction: rtl;">
+    <option value="ארצות הברית">ארצות הברית</option>
+    <option value="ישראל">ישראל</option>
+    <option value="איטליה">איטליה</option>
+    <option value="גרמניה">גרמניה</option>
+    <option value="צרפת">צרפת</option>
+    <option value="אירלנד">אירלנד</option>
+    <option value="יפן">יפן</option>
+    <option value="קנדה">קנדה</option>
+    <option value="ארגנטינה">ארגנטינה</option>
+  </select> &nbsp;
+  <input type="text" id="boxna" size="8" />
+  <br /> <br>
+  <p id="order"></p>
+  <p id="order2"></p>
+  <button id="shapesButton" style="font-size: 27px;">
+    🖌️</button> &nbsp;
+  &nbsp;
+  <button id="musicButton" style="background-color: rgb(250, 226, 226); font-size: 27px;">&#x1F3B5</button> &nbsp;
+  &nbsp;
+  <button class="plus" id="mathButton" style="background-color: rgb(250, 226, 226); font-size: 27px;">🧮</button> <br>
+  <br> <br>
+  <button id="h2">?איך משחקים</button> <br>
+  <button class="traingu" id="traingu">.</button> &nbsp; &nbsp;
+  <button id="squ" class="squ">/</button> &nbsp; &nbsp;
+  <button class="circ" id="circ">.</button> &nbsp; &nbsp;
+  <button id="upp" class="up">.</button> &nbsp; &nbsp;
+  <button id="lineses" class="lines">.</button> &nbsp; &nbsp;
+
+
+  <h3 id="h51" style="display: none; ">המשחק מחולק ל4 פעילויות: לימוד מספרים וחשבון, לימוד אותיות, בניית דגלים וצורות
+    ונגינת מוזיקה. צפו בסרטון הדגמה הקצר להבנה מיטבית</h3>
+
+  <iframe id="video" style="display: none; margin: auto;" width="540" height="315"
+    src="https://www.youtube.com/embed/gpEC3zG6Xrs?si=78ECkdidwEOCDo6v" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+
+
+  <p id="clue1"></p>
+
+  <div id="popup-container">
+    <div id="popup-number"></div>
+  </div>
+
+
+
+</body>
+
+</html>
