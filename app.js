@@ -1,0 +1,14 @@
+import "./src/Music/abcSong.js";
+import "./src/Words/putName.js";
+import "./src/Numbers/mathOperations.js";
+import "./src/Numbers/removeAndMakeButtons.js";
+import "./src/Numbers/writingNumbersByClick.js";
+import "./src/Flags/circle.js";
+import "./src/Flags/conicGardientLines.js";
+import "./src/Flags/flagsPaintsfromWeb.js";
+import "./src/Flags/lines.js";
+import "./src/Flags/square.js";
+import "./src/Flags/traingular.js";
+import "./src/ButtonsVisibilty/PaintAllButtonsToWhite.js";
+import "./src/ButtonsVisibilty/makingShapesButtons.js";
+import "./src/ButtonsVisibilty/gameDirections.js";
