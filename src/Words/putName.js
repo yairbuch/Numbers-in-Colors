@@ -1,4 +1,5 @@
 import { boxna, namesButton } from "../services/domService.js";
+import { searchAndDisplayImages } from "./ImageOfSpokenWord.js";
 import { WritesNameToTable } from "./WriteNameToTable.js";
 
 export const speechFeedback = document.getElementById("speechFeedback");
@@ -21,6 +22,7 @@ export const putName = () => {
         if (spokenWord) {
           WritesNameToTable();
           speechFeedback.textContent = "";
+          searchAndDisplayImages(spokenWord);
         }
       };
 

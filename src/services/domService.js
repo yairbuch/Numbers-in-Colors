@@ -17,6 +17,7 @@ export const order = document.getElementById("order");
 export const order2 = document.getElementById("order2");
 export const initialResult = document.getElementById("initialResult");
 export const video = document.getElementById("video");
+export const mainHead = document.getElementById("mainHead");
 
 /***** Buttons *****/
 export const directionsButton = document.getElementById("h2");
