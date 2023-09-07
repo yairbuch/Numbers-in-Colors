@@ -96,13 +96,22 @@ export const WritesNameToTable = () => {
     }
   };
 
-  a1.onclick = () => buildname(a1, document.createTextNode(a1.innerText));
-  b2.onclick = () => buildname(b2, document.createTextNode(b2.innerText));
-  c3.onclick = () => buildname(c3, document.createTextNode(c3.innerText));
-  d4.onclick = () => buildname(d4, document.createTextNode(d4.innerText));
-  e5.onclick = () => buildname(e5, document.createTextNode(e5.innerText));
-  f6.onclick = () => buildname(f6, document.createTextNode(f6.innerText));
-  g7.onclick = () => buildname(g7, document.createTextNode(g7.innerText));
-  h8.onclick = () => buildname(h8, document.createTextNode(h8.innerText));
-  i9.onclick = () => buildname(i9, document.createTextNode(i9.innerText));
+  a1.onclick = () =>
+    buildname(a1, document.createTextNode(a1.innerText || " "));
+  b2.onclick = () =>
+    buildname(b2, document.createTextNode(b2.innerText || " "));
+  c3.onclick = () =>
+    buildname(c3, document.createTextNode(c3.innerText || " "));
+  d4.onclick = () =>
+    buildname(d4, document.createTextNode(d4.innerText || " "));
+  e5.onclick = () =>
+    buildname(e5, document.createTextNode(e5.innerText || " "));
+  f6.onclick = () =>
+    buildname(f6, document.createTextNode(f6.innerText || " "));
+  g7.onclick = () =>
+    buildname(g7, document.createTextNode(g7.innerText || " "));
+  h8.onclick = () =>
+    buildname(h8, document.createTextNode(h8.innerText || " "));
+  i9.onclick = () =>
+    buildname(i9, document.createTextNode(i9.innerText || " "));
 };
