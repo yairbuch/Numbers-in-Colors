@@ -1,4 +1,5 @@
 import { table } from "../services/domService.js";
+import { animateCircles } from "./ImageOfSpokenWord.js";
 
 export const WritesNameToTable = () => {
   function shuffleArray(array) {
@@ -22,6 +23,7 @@ export const WritesNameToTable = () => {
       table.querySelector(`#${positions[index]}`).innerText = " ";
     }
   }
+
   shuffleArray(positions);
 
   for (let i = 0; i < inputString.length && i < positions.length; i++) {
@@ -35,54 +37,21 @@ export const WritesNameToTable = () => {
 
   const buildname = (number, textNode) => {
     const initialResult = document.getElementById("initialResult");
+    const name = localStorage.name;
 
-    if (
-      initialResult.innerHTML.length === 0 &&
-      number.innerText !== localStorage.name[0]
-    ) {
-      initialResult.innerHTML = "";
-    } else if (
-      initialResult.innerHTML.length === 1 &&
-      number.innerText !== localStorage.name[1]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 2 &&
-      number.innerText !== localStorage.name[2]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 3 &&
-      number.innerText !== localStorage.name[3]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 4 &&
-      number.innerText !== localStorage.name[4]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 5 &&
-      number.innerText !== localStorage.name[5]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 6 &&
-      number.innerText !== localStorage.name[6]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 7 &&
-      number.innerText !== localStorage.name[7]
-    ) {
-      initialResult.innerHTML += "";
-    } else if (
-      initialResult.innerHTML.length === 8 &&
-      number.innerText !== localStorage.name[8]
-    ) {
-      initialResult.innerHTML += "";
+    // Check if the current character is a space
+    if (number.innerText === " ") {
+      // Handle spaces, e.g., by appending a space character
+      initialResult.innerHTML += " ";
     } else {
-      initialResult.appendChild(textNode);
+      // Handle other characters by checking against the corresponding character in the name
+      const currentIndex = initialResult.innerHTML.length;
+      if (
+        currentIndex < name.length &&
+        number.innerText === name[currentIndex]
+      ) {
+        initialResult.appendChild(textNode);
+      }
     }
 
     if (initialResult.innerHTML == mainHead.innerHTML) {
@@ -90,28 +59,20 @@ export const WritesNameToTable = () => {
       mainHead.style.color = "Blue";
       mainHead.style.fontSize = "50px";
       body.style.backgroundColor = "yellow";
+      animateCircles();
       setTimeout(() => {
         document.location.reload();
       }, 4000);
     }
   };
 
-  a1.onclick = () =>
-    buildname(a1, document.createTextNode(a1.innerText || " "));
-  b2.onclick = () =>
-    buildname(b2, document.createTextNode(b2.innerText || " "));
-  c3.onclick = () =>
-    buildname(c3, document.createTextNode(c3.innerText || " "));
-  d4.onclick = () =>
-    buildname(d4, document.createTextNode(d4.innerText || " "));
-  e5.onclick = () =>
-    buildname(e5, document.createTextNode(e5.innerText || " "));
-  f6.onclick = () =>
-    buildname(f6, document.createTextNode(f6.innerText || " "));
-  g7.onclick = () =>
-    buildname(g7, document.createTextNode(g7.innerText || " "));
-  h8.onclick = () =>
-    buildname(h8, document.createTextNode(h8.innerText || " "));
-  i9.onclick = () =>
-    buildname(i9, document.createTextNode(i9.innerText || " "));
+  a1.onclick = () => buildname(a1, document.createTextNode(a1.innerText));
+  b2.onclick = () => buildname(b2, document.createTextNode(b2.innerText));
+  c3.onclick = () => buildname(c3, document.createTextNode(c3.innerText));
+  d4.onclick = () => buildname(d4, document.createTextNode(d4.innerText));
+  e5.onclick = () => buildname(e5, document.createTextNode(e5.innerText));
+  f6.onclick = () => buildname(f6, document.createTextNode(f6.innerText));
+  g7.onclick = () => buildname(g7, document.createTextNode(g7.innerText));
+  h8.onclick = () => buildname(h8, document.createTextNode(h8.innerText));
+  i9.onclick = () => buildname(i9, document.createTextNode(i9.innerText));
 };

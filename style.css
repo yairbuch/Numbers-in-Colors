@@ -217,3 +217,8 @@
   #popup-number {
       font-size: 100px;
   }
+
+  .circle {
+      position: absolute;
+      transition: transform 0.5s ease-in-out;
+  }
