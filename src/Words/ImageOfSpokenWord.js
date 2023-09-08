@@ -1,8 +1,8 @@
+const images = [];
 export function searchAndDisplayImages(query) {
   const apiKey = "AIzaSyDdgF_ATwZTbwOwS7Ys4P32E7TdDZO9HkE";
   const cx = "121570243da2a42d2";
   const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${query}&searchType=image&key=${apiKey}&cx=${cx}`;
-  const images = [];
   const imageContainer = document.getElementById("image-container");
   fetch(searchUrl)
     .then((response) => response.json())
