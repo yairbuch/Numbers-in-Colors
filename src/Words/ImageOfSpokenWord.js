@@ -46,7 +46,9 @@ export function searchAndDisplayImages(query) {
             image.style.width = "100px";
             image.style.height = "100px";
             image.style.borderRadius = "50%";
-            image.classList.add("circle"); // Add the 'circle' class to the image
+            image.style.position = "absolute";
+            image.style.transition = "transform 0.5s ease-in-out";
+            // image.classList.add("circle"); // Add the 'circle' class to the image
             imageContainer.appendChild(image); // Append the image to the document
             return image;
           }
