@@ -50,6 +50,10 @@ export function searchAndDisplayImages(query) {
             image.style.transition = "transform 0.5s ease-in-out";
             // image.classList.add("circle"); // Add the 'circle' class to the image
             imageContainer.appendChild(image); // Append the image to the document
+            const index = images.length;
+            image.style.left = `${index * 3}px`; // Adjust the spacing as needed
+
+            imageContainer.appendChild(image); // Append the image to the document
             return image;
           }
 
