@@ -8,9 +8,9 @@ export function searchAndDisplayImages(query) {
     .then((response) => response.json())
     .then((data) => {
       if (data.items && data.items.length > 0) {
-        const firstImage = data.items[0];
-        const secondImage = data.items[1];
-        const thirdImage = data.items[2];
+        const firstImage = data.items[0].link;
+        const secondImage = data.items[1].link;
+        const thirdImage = data.items[2].link;
         if (firstImage || secondImage || thirdImage) {
           //   const imageUrl = firstImage.link;
           //   const image = new Image();
