@@ -48,7 +48,6 @@ export function searchAndDisplayImages(query) {
             image.style.borderRadius = "50%";
             image.style.position = "absolute";
             image.style.transition = "transform 0.5s ease-in-out";
-            imageContainer.appendChild(image);
             const index = images.length;
             image.style.left = `${index * 100}px`;
 
