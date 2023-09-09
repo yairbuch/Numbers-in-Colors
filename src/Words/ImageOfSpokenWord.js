@@ -48,12 +48,11 @@ export function searchAndDisplayImages(query) {
             image.style.borderRadius = "50%";
             image.style.position = "absolute";
             image.style.transition = "transform 0.5s ease-in-out";
-            // image.classList.add("circle"); // Add the 'circle' class to the image
-            imageContainer.appendChild(image); // Append the image to the document
+            imageContainer.appendChild(image);
             const index = images.length;
-            image.style.left = `${index * 100}px`; // Adjust the spacing as needed
+            image.style.left = `${index * 100}px`;
 
-            imageContainer.appendChild(image); // Append the image to the document
+            imageContainer.appendChild(image);
             return image;
           }
 
@@ -79,6 +78,6 @@ export function animateCircles() {
       setTimeout(() => {
         image.style.transform = "translateY(100px)";
       }, 500);
-    }, index * 100); // Delay each image animation
+    }, index * 100);
   });
 }
