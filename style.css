@@ -218,7 +218,8 @@
       font-size: 100px;
   }
 
-  .circle {
-      position: absolute;
-      transition: transform 0.5s ease-in-out;
+  #image-container {
+      margin: 0;
+      padding: 0;
+
   }

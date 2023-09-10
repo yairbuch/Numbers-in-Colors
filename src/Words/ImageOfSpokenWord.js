@@ -62,6 +62,19 @@ export function searchAndDisplayImages(query) {
             return image;
           }
 
+          function repositionImages() {
+            images.forEach((image, index) => {
+              const containerWidth = imageContainer.clientWidth;
+              const imageWidth = 100;
+              const totalImageWidth = images.length * imageWidth;
+              const leftPosition = (containerWidth - totalImageWidth) / 2;
+              image.style.left = `${leftPosition + index * imageWidth}px`;
+            });
+          }
+
+          // Attach the repositionImages function to the window's resize event
+          window.addEventListener("resize", repositionImages);
+
           images.push(createCircleImage(firstImage));
           images.push(createCircleImage(secondImage));
           images.push(createCircleImage(thirdImage));
