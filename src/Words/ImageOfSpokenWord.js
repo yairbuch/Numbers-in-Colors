@@ -12,34 +12,6 @@ export function searchAndDisplayImages(query) {
         const secondImage = data.items[1].link;
         const thirdImage = data.items[2].link;
         if (firstImage || secondImage || thirdImage) {
-          //   const imageUrl = firstImage.link;
-          //   const image = new Image();
-          //   image.src = imageUrl;
-          //   image.style.width = "100px";
-          //   image.style.height = "100px";
-          //   image.style.borderRadius = "50%";
-
-          //   const imageUrl2 = secondImage.link;
-          //   const image2 = new Image();
-          //   image2.src = imageUrl2;
-          //   image2.style.width = "100px";
-          //   image2.style.height = "100px";
-          //   image2.style.borderRadius = "50%";
-
-          //   const imageUrl3 = thirdImage.link;
-          //   const image3 = new Image();
-          //   image3.src = imageUrl3;
-          //   image3.style.width = "100px";
-          //   image3.style.height = "100px";
-          //   image3.style.borderRadius = "50%";
-
-          //   // Display the image in the DOM.
-          //   const imageContainer = document.getElementById("image-container");
-          //   imageContainer.innerHTML = "";
-          //   imageContainer.appendChild(image);
-          //   imageContainer.appendChild(image2);
-          //   imageContainer.appendChild(image3);
-
           function createCircleImage(imageUrl) {
             const image = new Image();
             image.src = imageUrl;
@@ -52,7 +24,7 @@ export function searchAndDisplayImages(query) {
             // image.style.left = `${index * 100}px`;
 
             const containerWidth = imageContainer.clientWidth;
-            const imageWidth = 100; // Width of the image
+            const imageWidth = 180; // Width of the image
             const totalImageWidth = images.length * imageWidth;
             const leftPosition = (containerWidth - totalImageWidth) / 2;
 
