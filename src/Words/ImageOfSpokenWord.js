@@ -24,7 +24,7 @@ export function searchAndDisplayImages(query) {
             // image.style.left = `${index * 100}px`;
 
             const containerWidth = imageContainer.clientWidth;
-            const imageWidth = 180; // Width of the image
+            const imageWidth = 150; // Width of the image
             const totalImageWidth = images.length * imageWidth;
             const leftPosition = (containerWidth - totalImageWidth) / 2;
 
