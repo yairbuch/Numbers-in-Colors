@@ -1,4 +1,4 @@
-import { table } from "../services/domService.js";
+import { boxna, boxnaValue, table } from "../services/domService.js";
 import { animateCircles } from "./ImageOfSpokenWord.js";
 
 export const WritesNameToTable = () => {
@@ -15,7 +15,12 @@ export const WritesNameToTable = () => {
 
   const assignedLetters = {};
 
+  let limitedString = "";
+
+  console.log(assignedLetters);
+
   function assignLetter(index, letter) {
+    console.log(letter);
     if (!assignedLetters[letter]) {
       assignedLetters[letter] = true;
       table.querySelector(`#${positions[index]}`).innerText = letter;
@@ -26,26 +31,33 @@ export const WritesNameToTable = () => {
 
   shuffleArray(positions);
 
-  for (let i = 0; i < inputString.length && i < positions.length; i++) {
-    assignLetter(i, inputString[i]);
+  for (let i = 0; i < inputString.length; i++) {
+    const element = inputString[i];
+    if (!limitedString.includes(element)) {
+      limitedString = limitedString.concat(element);
+    }
   }
 
-  for (let i = inputString.length; i < positions.length; i++) {
+  if (inputString.length > 9) alert("You choosed too long word..");
+
+  for (let i = 0; i < limitedString.length && i < positions.length; i++) {
+    assignLetter(i, limitedString[i]);
+  }
+
+  for (let i = limitedString.length; i < positions.length; i++) {
     table.querySelector(`#${positions[i]}`).innerText = " ";
   }
+
   mainHead.innerHTML = localStorage.name;
 
   const buildname = (number, textNode) => {
     const initialResult = document.getElementById("initialResult");
     const name = localStorage.name;
+    const currentIndex = initialResult.innerHTML.length;
 
-    // Check if the current character is a space
-    if (number.innerText === " ") {
-      // Handle spaces, e.g., by appending a space character
+    if (number.innerText === "" && name[currentIndex] === " ") {
       initialResult.innerHTML += " ";
     } else {
-      // Handle other characters by checking against the corresponding character in the name
-      const currentIndex = initialResult.innerHTML.length;
       if (
         currentIndex < name.length &&
         number.innerText === name[currentIndex]

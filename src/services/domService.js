@@ -34,6 +34,7 @@ export const musicButton = document.getElementById("musicButton");
 export const countryName = document.getElementById("boxsh");
 export const boxna = document.getElementById("boxna");
 export const box = document.getElementById("box");
+export let boxnaValue = document.getElementById("boxna").value;
 
 /***** shapes *****/
 export let circ = document.querySelector(".circ");
