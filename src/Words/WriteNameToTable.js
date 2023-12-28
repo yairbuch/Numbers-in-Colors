@@ -71,7 +71,7 @@ export const WritesNameToTable = () => {
       mainHead.style.color = "Blue";
       mainHead.style.fontSize = "50px";
       body.style.backgroundColor = "yellow";
-      animateCircles();
+      // animateCircles();
       setTimeout(() => {
         document.location.reload();
       }, 4000);
