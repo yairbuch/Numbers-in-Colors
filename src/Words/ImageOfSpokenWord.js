@@ -62,13 +62,13 @@ export function searchAndDisplayImages(query) {
     });
 }
 
-// export function animateCircles() {
-//   images.forEach((image, index) => {
-//     setTimeout(() => {
-//       image.style.transform = "translateY(330px)";
-//       setTimeout(() => {
-//         image.style.transform = "translateY(100px)";
-//       }, 500);
-//     }, index * 100);
-//   });
-// }
+export function animateCircles() {
+  images.forEach((image, index) => {
+    setTimeout(() => {
+      image.style.transform = "translateY(330px)";
+      setTimeout(() => {
+        image.style.transform = "translateY(100px)";
+      }, 500);
+    }, index * 100);
+  });
+}
