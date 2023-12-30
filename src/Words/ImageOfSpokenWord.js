@@ -23,10 +23,7 @@ export function searchAndDisplayImages(query) {
             const index = images.length;
             image.style.left = `${index * 100}px`;
 
-            imageContainer.style.display = "flex";
-            imageContainer.style.alignItems = "center";
-            imageContainer.style.justifyContent = "center";
-            imageContainer.style.gap = "5px";
+            imageContainer.style.display = "block";
 
             const containerWidth = imageContainer.clientWidth;
             const imageWidth = 150; // Width of the image
@@ -42,7 +39,7 @@ export function searchAndDisplayImages(query) {
           function repositionImages() {
             images.forEach((image, index) => {
               const containerWidth = imageContainer.clientWidth;
-              const imageWidth = 100;
+              const imageWidth = 300;
               const totalImageWidth = images.length * imageWidth;
               const leftPosition = (containerWidth - totalImageWidth) / 2;
               image.style.left = `${leftPosition + index * imageWidth}px`;
