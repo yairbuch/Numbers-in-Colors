@@ -23,7 +23,10 @@ export function searchAndDisplayImages(query) {
             const index = images.length;
             image.style.left = `${index * 100}px`;
 
-            imageContainer.style.display = "block";
+            imageContainer.style.display = "flex";
+            imageContainer.style.alignItems = "center";
+            imageContainer.style.justifyContent = "center";
+            imageContainer.style.gap = "5px";
 
             const containerWidth = imageContainer.clientWidth;
             const imageWidth = 150; // Width of the image
