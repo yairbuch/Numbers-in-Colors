@@ -20,10 +20,10 @@ export function searchAndDisplayImages(query) {
             image.style.borderRadius = "50%";
             image.style.position = "absolute";
             image.style.transition = "transform 0.5s ease-in-out";
-            // const index = images.length;
-            // image.style.left = `${index * 100}px`;
+            const index = images.length;
+            image.style.left = `${index * 100}px`;
 
-            imageContainer.style.display = "flex";
+            imageContainer.style.display = "block";
 
             const containerWidth = imageContainer.clientWidth;
             const imageWidth = 150; // Width of the image
