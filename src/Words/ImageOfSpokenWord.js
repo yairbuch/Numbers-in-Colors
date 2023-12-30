@@ -25,12 +25,12 @@ export function searchAndDisplayImages(query) {
 
             imageContainer.style.display = "block";
 
-            const containerWidth = imageContainer.clientWidth;
-            const imageWidth = 50; // Width of the image
-            const totalImageWidth = images.length * imageWidth;
-            const leftPosition = (containerWidth - totalImageWidth) / 2;
+            // const containerWidth = imageContainer.clientWidth;
+            // const imageWidth = 150; // Width of the image
+            // const totalImageWidth = images.length * imageWidth;
+            // const leftPosition = (containerWidth - totalImageWidth) / 2;
 
-            image.style.left = `${leftPosition + images.length * imageWidth}px`;
+            // image.style.left = `${leftPosition + images.length * imageWidth}px`;
 
             imageContainer.appendChild(image);
             return image;
