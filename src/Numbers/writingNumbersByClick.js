@@ -7,6 +7,7 @@ import {
 
 let count = 0;
 let colorIndex = 0;
+
 const colors = [
   "rgb(50, 188, 243)",
   "rgb(198, 40, 198)",

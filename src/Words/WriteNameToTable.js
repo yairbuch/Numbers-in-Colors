@@ -38,7 +38,10 @@ export const WritesNameToTable = () => {
     }
   }
 
-  if (inputString.length > 9) alert("You choosed too long word..");
+  if (inputString.length > 9) {
+    alert("You choosed too long word..");
+    document.location.reload();
+  }
 
   for (let i = 0; i < limitedString.length && i < positions.length; i++) {
     assignLetter(i, limitedString[i]);
