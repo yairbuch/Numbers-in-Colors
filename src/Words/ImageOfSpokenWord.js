@@ -21,7 +21,7 @@ export function searchAndDisplayImages(query) {
             image.style.position = "absolute";
             image.style.transition = "transform 0.5s ease-in-out";
             const index = images.length;
-            image.style.left = `${index * 100}px`;
+            image.style.left = `${index * 200}px`;
 
             imageContainer.style.display = "block";
 
@@ -39,7 +39,7 @@ export function searchAndDisplayImages(query) {
           function repositionImages() {
             images.forEach((image, index) => {
               const containerWidth = imageContainer.clientWidth;
-              const imageWidth = 300;
+              const imageWidth = 100;
               const totalImageWidth = images.length * imageWidth;
               const leftPosition = (containerWidth - totalImageWidth) / 2;
               image.style.left = `${leftPosition + index * imageWidth}px`;
