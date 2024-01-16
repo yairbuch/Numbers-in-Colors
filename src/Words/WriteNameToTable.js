@@ -1,7 +1,7 @@
 import { boxna, boxnaValue, table } from "../services/domService.js";
 import { animateCircles } from "./ImageOfSpokenWord.js";
 
-const successSound = new Audio("../../sounds/success-1-6297.mp3");
+const successSound = new Audio("../../sounds/goodresult-82807.mp3");
 
 export const WritesNameToTable = () => {
   function shuffleArray(array) {
