@@ -1,6 +1,8 @@
 import { boxna, boxnaValue, table } from "../services/domService.js";
 import { animateCircles } from "./ImageOfSpokenWord.js";
 
+const successSound = new Audio("../../sounds/success-1-6297.mp3");
+
 export const WritesNameToTable = () => {
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -70,6 +72,7 @@ export const WritesNameToTable = () => {
     }
 
     if (initialResult.innerHTML == mainHead.innerHTML) {
+      successSound.play();
       initialResult.style.color = "Blue";
       mainHead.style.color = "Blue";
       mainHead.style.fontSize = "50px";
@@ -77,7 +80,7 @@ export const WritesNameToTable = () => {
       animateCircles();
       setTimeout(() => {
         document.location.reload();
-      }, 4000);
+      }, 2000);
     }
   };
 

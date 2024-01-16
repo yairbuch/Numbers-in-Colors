@@ -20,13 +20,11 @@ export function searchAndDisplayImages(query) {
             image.style.borderRadius = "50%";
             image.style.position = "absolute";
             image.style.transition = "transform 0.5s ease-in-out";
-            // const index = images.length;
-            // image.style.left = `${index * 100}px`;
 
             imageContainer.style.display = "block";
 
             const containerWidth = imageContainer.clientWidth;
-            const imageWidth = 220; // Width of the image
+            const imageWidth = 220;
             const totalImageWidth = images.length * imageWidth;
             const leftPosition = (containerWidth - totalImageWidth) / 2;
 
@@ -69,7 +67,7 @@ export function animateCircles() {
     setTimeout(() => {
       image.style.transform = "translateY(330px)";
       setTimeout(() => {
-        image.style.transform = "translateY(100px)";
+        image.style.transform = "translateY(150px)";
       }, 500);
     }, index * 100);
   });
