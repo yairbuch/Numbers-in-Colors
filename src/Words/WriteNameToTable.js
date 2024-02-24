@@ -53,28 +53,28 @@ export const WritesNameToTable = () => {
   mainHead.innerHTML = localStorage.name;
   // searchAndDisplayImages(localStorage.name);
 
-  // const currentIndex = initialResult.innerHTML.length;
-  // let charToStyle = localStorage.name[currentIndex];
+  const currentIndex = initialResult.innerHTML.length;
+  let charToStyle = localStorage.name[currentIndex];
 
-  // if (currentIndex === 0) {
-  //   mainHead.innerHTML =
-  //     localStorage.name.substring(0, currentIndex) +
-  //     '<span style="color: red;">' +
-  //     charToStyle +
-  //     "</span>" +
-  //     localStorage.name.substring(currentIndex + 1);
-  // }
+  if (currentIndex === 0) {
+    mainHead.innerHTML =
+      localStorage.name.substring(0, currentIndex) +
+      '<span style="color: red;">' +
+      charToStyle +
+      "</span>" +
+      localStorage.name.substring(currentIndex + 1);
+  }
 
   const buildname = (number, textNode) => {
     const initialResult = document.getElementById("initialResult");
     const name = localStorage.name;
 
-    // mainHead.innerHTML =
-    //   localStorage.name.substring(0, currentIndex) +
-    //   '<span style="color: red;">' +
-    //   charToStyle +
-    //   "</span>" +
-    //   localStorage.name.substring(currentIndex + 1);
+    mainHead.innerHTML =
+      localStorage.name.substring(0, currentIndex) +
+      '<span style="color: red;">' +
+      charToStyle +
+      "</span>" +
+      localStorage.name.substring(currentIndex + 1);
 
     if (number.innerText === "" && name[currentIndex] === " ") {
       initialResult.innerHTML += " ";
