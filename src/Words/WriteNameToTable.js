@@ -51,9 +51,10 @@ export const WritesNameToTable = () => {
   }
 
   mainHead.innerHTML = localStorage.name;
-  // searchAndDisplayImages(localStorage.name);
+  searchAndDisplayImages(localStorage.name);
 
-  // const currentIndex = initialResult.innerHTML.length;
+  const currentIndex = initialResult.innerHTML.length;
+
   // let charToStyle = localStorage.name[currentIndex];
 
   // if (currentIndex === 0) {
