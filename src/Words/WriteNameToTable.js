@@ -1,5 +1,5 @@
-import { boxna, boxnaValue, table } from "../services/domService.js";
-import { animateCircles } from "./ImageOfSpokenWord.js";
+import { boxna, boxnaValue, mainHead, table } from "../services/domService.js";
+import { animateCircles, searchAndDisplayImages } from "./ImageOfSpokenWord.js";
 
 const successSound = new Audio("../../sounds/goodresult-82807.mp3");
 
@@ -19,10 +19,7 @@ export const WritesNameToTable = () => {
 
   let limitedString = "";
 
-  console.log(assignedLetters);
-
   function assignLetter(index, letter) {
-    console.log(letter);
     if (!assignedLetters[letter]) {
       assignedLetters[letter] = true;
       table.querySelector(`#${positions[index]}`).innerText = letter;
@@ -54,11 +51,30 @@ export const WritesNameToTable = () => {
   }
 
   mainHead.innerHTML = localStorage.name;
+  searchAndDisplayImages(localStorage.name);
+
+  // const currentIndex = initialResult.innerHTML.length;
+  // let charToStyle = localStorage.name[currentIndex];
+
+  // if (currentIndex === 0) {
+  //   mainHead.innerHTML =
+  //     localStorage.name.substring(0, currentIndex) +
+  //     '<span style="color: red;">' +
+  //     charToStyle +
+  //     "</span>" +
+  //     localStorage.name.substring(currentIndex + 1);
+  // }
 
   const buildname = (number, textNode) => {
     const initialResult = document.getElementById("initialResult");
     const name = localStorage.name;
-    const currentIndex = initialResult.innerHTML.length;
+
+    // mainHead.innerHTML =
+    //   localStorage.name.substring(0, currentIndex) +
+    //   '<span style="color: red;">' +
+    //   charToStyle +
+    //   "</span>" +
+    //   localStorage.name.substring(currentIndex + 1);
 
     if (number.innerText === "" && name[currentIndex] === " ") {
       initialResult.innerHTML += " ";
@@ -71,7 +87,7 @@ export const WritesNameToTable = () => {
       }
     }
 
-    if (initialResult.innerHTML == mainHead.innerHTML) {
+    if (initialResult.textContent == mainHead.textContent) {
       successSound.play();
       initialResult.style.color = "Blue";
       mainHead.style.color = "Blue";

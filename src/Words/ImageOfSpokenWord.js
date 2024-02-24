@@ -67,7 +67,7 @@ export function animateCircles() {
     setTimeout(() => {
       image.style.transform = "translateY(330px)";
       setTimeout(() => {
-        image.style.transform = "translateY(50px)";
+        image.style.transform = "translateY(30px)";
       }, 500);
     }, index * 100);
   });
