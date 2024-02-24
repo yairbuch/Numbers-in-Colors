@@ -84,7 +84,8 @@ export const WritesNameToTable = () => {
         currentIndex < name.length &&
         number.innerText === name[currentIndex]
       ) {
-        initialResult.appendChild(textNode);
+        // initialResult.appendChild(textNode);
+        initialResult.innerText += textNode;
       }
     }
 
