@@ -116,7 +116,7 @@ import { boxna, boxnaValue, table } from "../services/domService.js";
 import { clickSound } from "../soundEffects/clicksound.js";
 import { animateCircles, searchAndDisplayImages } from "./ImageOfSpokenWord.js";
 
-const successSound = new Audio("../../sounds/goodresult-82807.mp3");
+const successSound = new Audio("../../sounds/mixkit-small-win-2020.wav");
 
 export const WritesNameToTable = () => {
   function shuffleArray(array) {
