@@ -113,6 +113,7 @@
 // };
 
 import { boxna, boxnaValue, table } from "../services/domService.js";
+import { clickSound } from "../soundEffects/clicksound.js";
 import { animateCircles, searchAndDisplayImages } from "./ImageOfSpokenWord.js";
 
 const successSound = new Audio("../../sounds/goodresult-82807.mp3");
@@ -155,9 +156,12 @@ export const WritesNameToTable = () => {
   for (let i = limitedString.length; i < positions.length; i++) {
     table.querySelector(`#${positions[i]}`).innerText = " ";
   }
+
   mainHead.innerHTML = localStorage.name;
-  searchAndDisplayImages(localStorage.name);
+  // searchAndDisplayImages(localStorage.name);
+
   const buildname = (number, textNode) => {
+    clickSound();
     const initialResult = document.getElementById("initialResult");
     const name = localStorage.name;
     const currentIndex = initialResult.innerHTML.length;

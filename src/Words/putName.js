@@ -28,6 +28,10 @@ export const putName = () => {
 
       recognition.onerror = (event) => {
         console.error("Speech recognition error:", event.error);
+        speechFeedback.textContent = `Speech error`;
+        setTimeout(() => {
+          document.location.reload();
+        }, 2000);
       };
 
       recognition.onend = () => {
