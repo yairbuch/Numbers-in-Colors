@@ -1,4 +1,14 @@
-import { musicButton, boxna } from "../services/domService.js";
+import { musicButton, boxna, i9 } from "../services/domService.js";
+
+const doNote = new Audio("../sounds/do.wav");
+const solNote = new Audio("../sounds/sol.wav");
+const laNote = new Audio("../sounds/la.wav");
+const faNote = new Audio("../sounds/fa.wav");
+const miNote = new Audio("../sounds/mi.wav");
+const reNote = new Audio("../sounds/re.wav");
+const siNote = new Audio("../sounds/si.m4a");
+const octave = new Audio("../sounds/octave.wav");
+const highRe = new Audio("../../sounds/piano-note-d_D_major.wav");
 
 export const music = async () => {
   if (boxna.value == "abc") {
@@ -135,36 +145,31 @@ export const music = async () => {
   }
 
   a1.onclick = function () {
-    const doNote = new Audio("../sounds/do.wav");
     doNote.play();
   };
   e5.onclick = function () {
-    const solNote = new Audio("../sounds/sol.wav");
     solNote.play();
   };
   f6.onclick = function () {
-    const laNote = new Audio("../sounds/la.wav");
     laNote.play();
   };
   d4.onclick = function () {
-    const faNote = new Audio("../sounds/fa.wav");
     faNote.play();
   };
   c3.onclick = function () {
-    const miNote = new Audio("../sounds/mi.wav");
     miNote.play();
   };
   b2.onclick = function () {
-    const reNote = new Audio("../sounds/re.wav");
     reNote.play();
   };
   g7.onclick = function () {
-    const siNote = new Audio("../sounds/si.m4a");
     siNote.play();
   };
   h8.onclick = function () {
-    const octave = new Audio("../sounds/octave.wav");
     octave.play();
+  };
+  i9.onclick = function () {
+    highRe.play();
   };
 };
 
