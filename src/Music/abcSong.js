@@ -1,15 +1,5 @@
 import { musicButton, boxna, i9 } from "../services/domService.js";
 
-const doNote = new Audio("../sounds/do.wav");
-const solNote = new Audio("../sounds/sol.wav");
-const laNote = new Audio("../sounds/la.wav");
-const faNote = new Audio("../sounds/fa.wav");
-const miNote = new Audio("../sounds/mi.wav");
-const reNote = new Audio("../sounds/re.wav");
-const siNote = new Audio("../sounds/si.m4a");
-const octave = new Audio("../sounds/octave.wav");
-const highRe = new Audio("../../sounds/piano-note-d_D_major.wav");
-
 export const music = async () => {
   if (boxna.value == "abc") {
     boxna.style.backgroundColor = "red";
@@ -145,32 +135,41 @@ export const music = async () => {
   }
 
   a1.onclick = () => {
+    const doNote = new Audio("../../sounds/do-80236.mp3");
     doNote.play();
   };
   e5.onclick = () => {
+    const solNote = new Audio("../../sounds/sol-101774.mp3");
     solNote.play();
   };
   f6.onclick = () => {
+    const laNote = new Audio("../../sounds/la-80237.mp3");
     laNote.play();
   };
   d4.onclick = () => {
+    const faNote = new Audio("../../sounds/fa-78409.mp3");
     faNote.play();
   };
   c3.onclick = () => {
+    const miNote = new Audio("../../sounds/mi-80239.mp3");
     miNote.play();
   };
   b2.onclick = () => {
+    const reNote = new Audio("../../sounds/re-78500.mp3");
     reNote.play();
   };
   g7.onclick = () => {
+    const siNote = new Audio("../../sounds/si-80238.mp3");
     siNote.play();
   };
   h8.onclick = () => {
+    const octave = new Audio("../../sounds/c6-102822.mp3");
     octave.play();
   };
-  // i9.onclick = () => {
-  //   highRe.play();
-  // };
+  i9.onclick = () => {
+    const highRe = new Audio("../../sounds/d6-82020.mp3");
+    highRe.play();
+  };
 };
 
 musicButton.addEventListener("click", () => music());

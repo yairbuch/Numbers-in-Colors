@@ -158,7 +158,10 @@ export const WritesNameToTable = () => {
   }
 
   mainHead.innerHTML = localStorage.name;
-  // searchAndDisplayImages(localStorage.name);
+
+  if (localStorage.numb !== "t") {
+    searchAndDisplayImages(localStorage.name);
+  }
 
   const buildname = (number, textNode) => {
     clickSound();
