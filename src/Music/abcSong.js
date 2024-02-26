@@ -144,33 +144,33 @@ export const music = async () => {
     }, 35200);
   }
 
-  a1.onclick = function () {
+  a1.onclick = () => {
     doNote.play();
   };
-  e5.onclick = function () {
+  e5.onclick = () => {
     solNote.play();
   };
-  f6.onclick = function () {
+  f6.onclick = () => {
     laNote.play();
   };
-  d4.onclick = function () {
+  d4.onclick = () => {
     faNote.play();
   };
-  c3.onclick = function () {
+  c3.onclick = () => {
     miNote.play();
   };
-  b2.onclick = function () {
+  b2.onclick = () => {
     reNote.play();
   };
-  g7.onclick = function () {
+  g7.onclick = () => {
     siNote.play();
   };
-  h8.onclick = function () {
+  h8.onclick = () => {
     octave.play();
   };
-  i9.onclick = function () {
-    highRe.play();
-  };
+  // i9.onclick = () => {
+  //   highRe.play();
+  // };
 };
 
 musicButton.addEventListener("click", () => music());
