@@ -160,7 +160,7 @@ export const WritesNameToTable = () => {
 
   mainHead.innerHTML = localStorage.name;
 
-  if (isSpeech === false) {
+  if (isSpeech !== true) {
     searchAndDisplayImages(localStorage.name);
   }
 
