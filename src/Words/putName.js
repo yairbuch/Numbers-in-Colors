@@ -3,7 +3,9 @@ import { searchAndDisplayImages } from "./ImageOfSpokenWord.js";
 import { WritesNameToTable } from "./WriteNameToTable.js";
 
 export const speechFeedback = document.getElementById("speechFeedback");
+export let isSpeech = false;
 export const putName = () => {
+  isSpeech = true;
   localStorage.numb = "t";
   if (boxna.value === "") {
     if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {

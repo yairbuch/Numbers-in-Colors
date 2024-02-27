@@ -115,6 +115,7 @@
 import { boxna, boxnaValue, table } from "../services/domService.js";
 import { clickSound } from "../soundEffects/clicksound.js";
 import { animateCircles, searchAndDisplayImages } from "./ImageOfSpokenWord.js";
+import { isSpeech } from "./putName.js";
 
 const successSound = new Audio("../../sounds/mixkit-small-win-2020.wav");
 
@@ -159,7 +160,7 @@ export const WritesNameToTable = () => {
 
   mainHead.innerHTML = localStorage.name;
 
-  if (localStorage.numb != "t") {
+  if (isSpeech === false) {
     searchAndDisplayImages(localStorage.name);
   }
 
