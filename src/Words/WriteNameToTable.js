@@ -159,7 +159,7 @@ export const WritesNameToTable = () => {
 
   mainHead.innerHTML = localStorage.name;
 
-  if (localStorage.numb !== "t") {
+  if (localStorage.numb != "t") {
     searchAndDisplayImages(localStorage.name);
   }
 

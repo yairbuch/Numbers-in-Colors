@@ -135,39 +135,39 @@ export const music = async () => {
   }
 
   a1.onclick = () => {
-    const doNote = new Audio("../../sounds/do-80236.mp3");
+    const doNote = new Audio("../../sounds/do-fix.mp3");
     doNote.play();
   };
   e5.onclick = () => {
-    const solNote = new Audio("../../sounds/sol-101774.mp3");
+    const solNote = new Audio("../../sounds/sol.mp3");
     solNote.play();
   };
   f6.onclick = () => {
-    const laNote = new Audio("../../sounds/la-80237.mp3");
+    const laNote = new Audio("../../sounds/la.mp3");
     laNote.play();
   };
   d4.onclick = () => {
-    const faNote = new Audio("../../sounds/fa-78409.mp3");
+    const faNote = new Audio("../../sounds/fa-fix.mp3");
     faNote.play();
   };
   c3.onclick = () => {
-    const miNote = new Audio("../../sounds/mi-80239.mp3");
+    const miNote = new Audio("../../sounds/mi-fix.mp3");
     miNote.play();
   };
   b2.onclick = () => {
-    const reNote = new Audio("../../sounds/re-78500.mp3");
+    const reNote = new Audio("../../sounds/re-fix.mp3");
     reNote.play();
   };
   g7.onclick = () => {
-    const siNote = new Audio("../../sounds/si-80238.mp3");
+    const siNote = new Audio("../../sounds/si.mp3");
     siNote.play();
   };
   h8.onclick = () => {
-    const octave = new Audio("../../sounds/c6-102822.mp3");
+    const octave = new Audio("../../sounds/c6.mp3");
     octave.play();
   };
   i9.onclick = () => {
-    const highRe = new Audio("../../sounds/d6-82020.mp3");
+    const highRe = new Audio("../../sounds/d6.mp3");
     highRe.play();
   };
 };
