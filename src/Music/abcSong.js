@@ -135,7 +135,7 @@ export const music = async () => {
   }
 
   a1.onclick = () => {
-    const doNote = new Audio("../../sounds/do-final.mp3");
+    const doNote = new Audio("../../sounds/do-short.mp3");
     doNote.play();
   };
   e5.onclick = () => {
@@ -155,7 +155,7 @@ export const music = async () => {
     miNote.play();
   };
   b2.onclick = () => {
-    const reNote = new Audio("../../sounds/re-final.mp3");
+    const reNote = new Audio("../../sounds/re-sshort.mp3");
     reNote.play();
   };
   g7.onclick = () => {

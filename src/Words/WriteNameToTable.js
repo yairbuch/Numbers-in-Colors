@@ -147,7 +147,7 @@ export const WritesNameToTable = () => {
       limitedString = limitedString.concat(element);
     }
   }
-  if (inputString.length > 9) {
+  if (inputString.length > 12) {
     alert("You choosed too long word..");
     document.location.reload();
   }
@@ -160,9 +160,7 @@ export const WritesNameToTable = () => {
 
   mainHead.innerHTML = localStorage.name;
 
-  if (isSpeech !== true) {
-    searchAndDisplayImages(localStorage.name);
-  }
+  searchAndDisplayImages(localStorage.name);
 
   const buildname = (number, textNode) => {
     clickSound();
