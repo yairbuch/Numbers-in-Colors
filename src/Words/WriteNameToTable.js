@@ -147,7 +147,7 @@ export const WritesNameToTable = () => {
       limitedString = limitedString.concat(element);
     }
   }
-  if (inputString.length > 12) {
+  if (inputString.length > 11) {
     alert("You choosed too long word..");
     document.location.reload();
   }
