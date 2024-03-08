@@ -1,4 +1,14 @@
 import { musicButton, boxna, i9 } from "../services/domService.js";
+import * as Tone from "tone";
+
+//pass in some initial values for the filter and filter envelope
+const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+const now = Tone.now();
+
+synth.triggerAttack("A4", now + 1);
+synth.triggerAttack("C4", now + 1.5);
+synth.triggerAttack("E4", now + 2);
+synth.triggerRelease(["D4", "F4", "A4", "C4", "E4"], now + 4);
 
 export const music = async () => {
   if (boxna.value == "abc") {
@@ -147,16 +157,18 @@ export const music = async () => {
     laNote.play();
   };
   d4.onclick = () => {
-    const faNote = new Audio("../../sounds/f.mp3");
-    faNote.play();
+    // const faNote = new Audio("../../sounds/f.mp3");
+    // faNote.play();
+    synth.triggerAttack("F4", now + 0.5);
   };
   c3.onclick = () => {
     const miNote = new Audio("../../sounds/e.mp3");
     miNote.play();
   };
   b2.onclick = () => {
-    const reNote = new Audio("../../sounds/d.mp3");
-    reNote.play();
+    // const reNote = new Audio("../../sounds/d.mp3");
+    // reNote.play();
+    synth.triggerAttack("D4", now);
   };
   g7.onclick = () => {
     const siNote = new Audio("../../sounds/b.mp3");

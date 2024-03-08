@@ -126,13 +126,13 @@ export const WritesNameToTable = () => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
+
   const inputString = localStorage.name || "";
   const positions = ["a1", "b2", "c3", "d4", "e5", "f6", "g7", "h8", "i9"];
   const assignedLetters = {};
   let limitedString = "";
-  console.log(assignedLetters);
+
   function assignLetter(index, letter) {
-    console.log(letter);
     if (!assignedLetters[letter]) {
       assignedLetters[letter] = true;
       table.querySelector(`#${positions[index]}`).innerText = letter;
@@ -140,20 +140,30 @@ export const WritesNameToTable = () => {
       table.querySelector(`#${positions[index]}`).innerText = " ";
     }
   }
+
   shuffleArray(positions);
+
   for (let i = 0; i < inputString.length; i++) {
     const element = inputString[i];
     if (!limitedString.includes(element)) {
       limitedString = limitedString.concat(element);
     }
   }
-  if (inputString.length > 11) {
-    alert("You choosed too long word..");
+
+  // if (inputString.length > 11) {
+  //   alert("You choosed too long word..");
+  //   document.location.reload();
+  // }
+
+  if (limitedString.length > 10) {
+    alert("בחרת מילה ארוכה מידי");
     document.location.reload();
   }
+
   for (let i = 0; i < limitedString.length && i < positions.length; i++) {
     assignLetter(i, limitedString[i]);
   }
+
   for (let i = limitedString.length; i < positions.length; i++) {
     table.querySelector(`#${positions[i]}`).innerText = " ";
   }
@@ -167,6 +177,7 @@ export const WritesNameToTable = () => {
     const initialResult = document.getElementById("initialResult");
     const name = localStorage.name;
     const currentIndex = initialResult.innerHTML.length;
+
     if (number.innerText === "" && name[currentIndex] === " ") {
       initialResult.innerHTML += " ";
     } else {
@@ -177,6 +188,7 @@ export const WritesNameToTable = () => {
         initialResult.appendChild(textNode);
       }
     }
+
     if (initialResult.innerHTML == mainHead.innerHTML) {
       successSound.play();
       initialResult.style.color = "Blue";
