@@ -1,7 +1,9 @@
 import { musicButton, boxna, i9 } from "../services/domService.js";
-import * as Tone from "tone";
+// import * as Tone from "tone";
 
 //pass in some initial values for the filter and filter envelope
+const Tone = require("tone");
+
 const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 const now = Tone.now();
 
